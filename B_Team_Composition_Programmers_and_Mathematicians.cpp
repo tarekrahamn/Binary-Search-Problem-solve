@@ -1,20 +1,22 @@
 /*
-Problem Link:
-https://codeforces.com/contest/1611/problem/B
-*/
-
-
-/*
  
                Starting with the name of almighty ALLAH 
 *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~**
             In the name of Allah, Most Gracious, Most Merciful             
                    লা ইলাহা ইল্লাল্লাহু মুহাম্মাদুর রাসুলুল্লাহ 
                         Author:  tarek200 
-                        Created: 09.06.2023 
+                        Created: 19.06.2023 
                 Practice is the only shortcut to improve  
-**/
+
+Problem Link :
+
+https://codeforces.com/contest/1611/problem/B
+ 
+ 
+*/
 #include <bits/stdc++.h>
+#include<vector>
+#include<set>
 #define   Tarek           ios::sync_with_stdio(false);cin.tie(0);
 #define   ll              long long int
 #define   ull             unsigned long long int
@@ -24,8 +26,8 @@ https://codeforces.com/contest/1611/problem/B
 #define   vc              vector<char>
 #define   vs              vector<string>
 #define   test            ll t;cin >> t;while(t--)
-#define   pb            push_back
-#define   pp             pop_back
+#define   pb              push_back
+#define   pp              pop_back
 #define   sz              size()
 #define   ff              first
 #define   ss              second
@@ -34,7 +36,7 @@ https://codeforces.com/contest/1611/problem/B
 #define   exit            return ;
 #define   next            continue;
 #define   B               break;
-#define  checkmate        return 0;
+#define   checkmate       return 0;
 #define   nl              "\n"
 #define   gcd(a,b)        __gcd(a,b)
 #define   lcm(a,b)        (a/gcd(a,b))*b
@@ -51,7 +53,6 @@ https://codeforces.com/contest/1611/problem/B
 const long long int N     = (ll) 1e7+1;
 const long long int M     = (ll) 1e9+5;
 using namespace std;
-const ull MOD = 1000003;
 void run(){
     ll n,m;
     cin >> n >> m;
@@ -61,8 +62,8 @@ void run(){
     ll len=1,range=m;
     while(len<=range){
         ll mid = (len+range)>>1;
-        ll other = (n - mid + m - mid);
-        if(other >= mid * 2) {
+        ll x = (n - mid + m - mid);
+        if(x >= mid * 2) {
             len=mid+1;
         }else{
             range=mid-1;
